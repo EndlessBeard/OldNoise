@@ -1,0 +1,17 @@
+{
+  "name": "oldnoise",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "WebGL 3.0 visualization project",
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

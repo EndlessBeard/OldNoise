@@ -1,0 +1,217 @@
+/* Side panel control styling */
+#control-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 220px;
+  height: 100%;
+  padding: 10px; /* Reduced padding */
+  background-color: rgba(20, 20, 20, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 3px; /* Reduced gap by 75% */
+  overflow-y: auto;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  font-family: 'Roboto', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 14px;
+  color: #ffffff; /* All text white */
+}
+
+.control-title {
+  margin: 0 0 4px 0; /* Reduced margin by 75% */
+  color: #fff;
+  font-size: 1.1em;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Box around noise inputs */
+.control-box {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 3px; /* 75% less than original padding */
+  margin-bottom: 4px; /* 75% less than original margin */
+  background-color: rgba(30, 30, 30, 0.5);
+}
+
+/* Collapsible box header */
+.control-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 4px; /* 75% reduced padding */
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.control-box-header h4 {
+  margin: 0;
+  color: #fff;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.control-box-toggle {
+  color: #fff;
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-box-content {
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}
+
+.control-box-content.collapsed {
+  max-height: 0;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 4px; /* Reduced by 75% */
+}
+
+/* Make label and input inline */
+.control-group .input-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px; /* Reduced by 75% */
+}
+
+.control-group .input-row label {
+  color: #fff; /* Changed from #cceeff to white */
+  margin-right: 10px;
+  flex: 1;
+  font-weight: 300;
+}
+
+.control-group .input-row input[type="number"] {
+  width: 70px;
+  background-color: #333;
+  border: 1px solid #555;
+  padding: 1px; /* Reduced by 75% */
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+  text-align: right;
+}
+
+.control-group input:focus {
+  outline: none;
+  border-color: #7a9cc6;
+}
+
+/* Add slider styles on the second row */
+.control-group .slider-container {
+  width: 100%;
+  padding: 1.5px 0; /* Reduced by 75% */
+}
+
+.control-group input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px; /* Slim slider track */
+  background: #3e4c5a;
+  border-radius: 2px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #6ba3e0;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.control-group input[type="range"]::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: #6ba3e0;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+/* Glow effect on focus/active */
+.control-group input[type="range"]:focus,
+.control-group input[type="range"]:active {
+  background: #4a5e75;
+  box-shadow: 0 0 8px rgba(107, 163, 224, 0.6);
+}
+
+.control-group input[type="range"]:focus::-webkit-slider-thumb,
+.control-group input[type="range"]:active::-webkit-slider-thumb {
+  background: #8dbbec;
+  box-shadow: 0 0 10px rgba(141, 187, 236, 0.8);
+}
+
+.control-group input[type="range"]:focus::-moz-range-thumb,
+.control-group input[type="range"]:active::-moz-range-thumb {
+  background: #8dbbec;
+  box-shadow: 0 0 10px rgba(141, 187, 236, 0.8);
+}
+
+/* Checkbox styling */
+.control-group .checkbox-row {
+  display: flex;
+  align-items: center;
+}
+
+.control-group .checkbox-row input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.control-group .checkbox-row label {
+  color: #fff; /* Changed from #cceeff to white */
+  font-weight: 300;
+}
+
+/* Add these styles for the speed controls */
+.speed-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 1px; /* Reduced by 75% */
+}
+
+.speed-control {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.speed-control span {
+  color: #fff; /* Changed from #cceeff to white */
+  margin-right: 5px;
+  width: 18px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.speed-control input {
+  width: 100%;
+  background-color: #333;
+  border: 1px solid #555;
+  padding: 1px; /* Reduced by 75% */
+  color: #fff;
+  font-size: 11px;
+  border-radius: 3px;
+}
