@@ -13,5 +13,8 @@
   "description": "WebGL 3.0 visualization project",
   "devDependencies": {
     "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "tinygradient": "^2.0.1"
   }
 }

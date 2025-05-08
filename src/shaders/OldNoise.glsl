@@ -16,6 +16,19 @@ uniform int u_octaves;
 uniform bool u_use3D; // Toggle between 2D and 3D noise
 uniform vec3 u_speed; // Controls x, y, z movement speed
 
+// Color gradient uniforms
+uniform vec3 u_gradientColors[32]; // Max 32 colors in gradient
+uniform int u_gradientSteps;       // Actual number of colors
+
+// Warp uniforms
+uniform float u_warpStrength;
+uniform int u_warpType; // 0: multiply, 1: additive, 2: exponent, 3: log
+
+// Mask layer uniforms
+uniform float u_maskCutoff;
+uniform float u_maskBlendStrength;
+uniform float u_maskSoftness;
+
 // Constants for permutation table
 const int B = 1024; // Increased cell size from 256 to 1024
 
